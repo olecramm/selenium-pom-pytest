@@ -1,4 +1,5 @@
-from pages.homepage import HomePage
+import time
+from pages.home_page import HomePage
 
 def test_home_page_title(driver):
     title_selenium = "Selenium"
@@ -12,6 +13,8 @@ def test_home_page_title(driver):
 
     # Get the title of the page
     title = home_page.get_title()
+
+    time.sleep(5)  # Wait for the page to load
 
     # Assert that the title is correct
     assert title_selenium == title, f"Expected title: {title_selenium}, but got: {title}"
