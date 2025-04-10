@@ -13,9 +13,8 @@ def create_driver():
     options.add_argument("--disable-infobars")
     options.add_argument("--disable-extensions")  
 
-    print("[DEBUG] Headless mode is disabled!")
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
     # Set implicit wait time
-    driver.implicitly_wait(10)  # Wait for elements to load
+    # driver.implicitly_wait(10)  # Wait for elements to load
     return driver

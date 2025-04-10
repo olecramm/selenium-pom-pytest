@@ -2,14 +2,19 @@ import time
 from pages.home_page import HomePage
 
 def test_home_page_title(driver):
+    """
+    Test the title of the home page.
+    This test verifies that the title of the home page is correct.
+    """
+    # Expected title
+
     title_selenium = "Selenium"
 
     # Create an instance of the HomePage class
     home_page = HomePage(driver)
-    url = "https://www.selenium.dev/"
 
     # Navigate to the home page
-    driver.get(url)
+    home_page.navigate_to_home_page()
 
     # Get the title of the page
     title = home_page.get_title()
