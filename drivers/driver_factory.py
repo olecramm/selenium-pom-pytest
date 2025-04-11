@@ -15,6 +15,4 @@ def create_driver():
 
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-    # Set implicit wait time
-    # driver.implicitly_wait(10)  # Wait for elements to load
     return driver

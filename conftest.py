@@ -3,6 +3,12 @@ import pytest
 from datetime import datetime
 from drivers.driver_factory import create_driver
 
+@pytest.fixture
+def driver(request):
+    driver = create_driver()
+    yield driver
+    driver.quit()
+
 # Required for attaching screenshots to HTML report
 def pytest_configure(config):
     global pytest_html
@@ -20,12 +26,6 @@ def pytest_configure(config):
     config.option.htmlpath = report_file
     config.option.self_contained_html = True
     config.option.css = ["custom.css"]
-
-@pytest.fixture
-def driver(request):
-    driver = create_driver()
-    yield driver
-    driver.quit()
 
 @pytest.hookimpl(hookwrapper=True)
 def pytest_runtest_makereport(item, call):
