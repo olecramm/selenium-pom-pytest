@@ -8,7 +8,7 @@ def test_about_page_title(driver):
     This test verifies that the title of the About page is correct.
     """
     # Expected title
-    title_selenium = "About Selenium | Seleniumm"
+    title_selenium = "About Selenium | Selenium"
 
     # Create an instance of the HomePage class
     home_page = HomePage(driver)

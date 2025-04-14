@@ -17,7 +17,7 @@ class NavBar(BasePage):
         self.click(locator=self.LOCATOR_NAVBAR)
 
     def click_about_dropdown_item(self):
-        self.click_list_element(locator=self.LOCATOR_ABOUT_DROPDOWN_ITEM)
+        self.click(locator=self.LOCATOR_ABOUT_DROPDOWN_ITEM)
         return AboutPage(driver=self.driver)
 
         

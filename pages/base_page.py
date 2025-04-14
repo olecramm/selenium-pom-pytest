@@ -9,7 +9,3 @@ class BasePage():
     def click(self, locator):
         element = self.wait.until(EC.element_to_be_clickable(locator))
         element.click()
-
-    def click_list_element(self, locator):
-        element = self.wait.until(EC.element_to_be_clickable(locator))
-        element.click()
