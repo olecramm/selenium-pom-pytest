@@ -1,9 +1,9 @@
-```markdown
-# Selenium POM Example
 
-This project demonstrates a Selenium-based test automation framework using the Page Object Model (POM) design pattern. It includes tests for a sample website, such as verifying page titles and navigation.
+# Selenium POM Example with Pytest #
 
-## Project Structure
+This project demonstrates a Selenium-based test automation framework using the Page Object Model (POM) design pattern and Pytest. It includes tests for a sample website, such as verifying page titles and navigation.
+
+## Project Structure ##
 
 ```
 .
